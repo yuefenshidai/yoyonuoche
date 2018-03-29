@@ -1,0 +1,74 @@
+.cover{
+	position: fixed;
+	z-index: 9999;
+	width: 750rpx;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+	left: 0;
+	top: 0;
+}
+.coverInnerBox{
+	width:610rpx;
+	min-height: 370rpx;
+	margin: 316rpx auto 0 auto;
+	background-color: #fff;
+	border-radius: 8rpx;
+	padding: 40rpx;
+}
+.coverInnerBox_Close{
+	width:610rpx;
+	height: 25rpx;
+	text-align: right;
+	position: relative;
+}
+.coverInnerBox_Close image{
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 25rpx;
+	width: 25rpx;
+}
+.coverInnerBox_Title{
+	width:610rpx;
+	text-align: center;
+	height: 56rpx;
+	line-height: 56rpx;
+	font-size: 40rpx;
+	margin-bottom: 44rpx;
+	font-weight: bold;
+}
+.coverInnerBox_Content{
+	width:610rpx;
+	min-height: 132rpx;
+	text-align: center;
+	font-size: 32rpx;
+	line-height: 44rpx;
+}
+.coverInnerBox_BtnGroup{
+	margin-top: 6rpx;
+	width:610rpx;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+.coverInnerBox_BtnGroup button {
+	width: 280rpx;
+	border-radius: 8rpx;
+	height: 90rpx;
+	line-height: 90rpx;
+	margin-right: 50rpx;
+	margin-top: 0!important;
+}
+.coverInnerBox_BtnGroup button:last-child{
+	margin-right: 0;
+}
+.coverInnerBox_BtnGroup .recommit{
+	background-color: #fff!important;
+	border:2rpx solid #fc7259!important;
+	background:#fff!important;
+	color: #f44763;
+}
+.coverInnerBox_BtnGroup .sure{
+	background: -webkit-linear-gradient(left, #ff8654 , #f44863);
+    background: linear-gradient(to right, #ff8654 , #f44863);
+}

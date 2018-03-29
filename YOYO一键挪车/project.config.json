@@ -1,0 +1,56 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.93",
+	"appid": "wx3221cdd1e5ae323a",
+	"projectname": "YOYO%E4%B8%80%E9%94%AE%E6%8C%AA%E8%BD%A6",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "挪车登记",
+					"pathName": "pages/register/register",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "挪车",
+					"pathName": "pages/working/working",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "打电话",
+					"pathName": "pages/call/call",
+					"query": ""
+				}
+			]
+		}
+	}
+}

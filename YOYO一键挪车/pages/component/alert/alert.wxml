@@ -1,0 +1,23 @@
+<block animation="{{animation}}">
+	<view class='cover' >
+		<view class='coverInnerBox'>
+			<view class='coverInnerBox_Close' >
+				<image src='../../image/close.png'></image>
+			</view>
+			<view class='coverInnerBox_Title'>
+				<!-- 友情提示 -->
+				{{title}}
+			</view>
+			<view class='coverInnerBox_Content'>
+				<!-- 请妥善保管您的挪车卡，以便其他车主 扫描二维码联系到您 -->
+				{{content}}
+			</view>
+			<view class='coverInnerBox_BtnGroup flex'>
+				<button class='recommit' wx:if="{{showCancel}}" bindtap='cancel'>{{cancelText}}</button>
+				<button class='sure' bindtap='sure'>{{confirmText}}</button>
+			</view>
+		</view>
+	</view>
+</block>
+
+

@@ -1,0 +1,18 @@
+<view class='title'>请求挪车
+	<text>(<text>下载挪车卡</text>)</text>
+</view>
+<view class='info'>请正确输入车牌号，平台将记录本次挪车信息</view>
+<view class='plateTitle'>我的车牌号</view>
+<view class='plateInput'>
+	 <input value="{{value}}"  placeholder='川A000001' maxlength="7"/>
+</view>
+<view class='plateTitle'>对方车牌号</view>
+<view class='plateInput'>
+	 <input   maxlength="7" placeholder='川A000001'/>
+</view>
+<view class='plateTitle'>车辆位置</view>
+<view class='plateInput'>
+	 <input  placeholder='点击获取当前位置' bindtap="chooseMap" disabled="{{true}}" value="{{address}}"/>
+</view>
+<button bindtap="sure">确认信息</button>
+<alert wx:if="{{comp}}" bind:sure="modalClose"></alert>

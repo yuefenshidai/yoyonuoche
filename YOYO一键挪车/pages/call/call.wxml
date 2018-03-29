@@ -1,0 +1,11 @@
+<view class='title'>拨打电话
+</view>
+<view class='info'>您的车辆车牌号为 川A24532，即将请求车牌号 为 川A215D1的车主挪车</view>
+<view class='callImgBox'>
+	<image src='../image/call.png'></image>
+</view>
+<button bindtap="getphonenumber">
+	<image src='../image/call_icon.png'></image>
+	<text>拨打电话</text>
+</button>
+<alert wx:if="{{comp}}" bind:sure="modalClose"></alert>

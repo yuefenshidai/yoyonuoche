@@ -1,0 +1,52 @@
+page{
+	padding: 0 40rpx;
+	width: 670rpx;
+	overflow: hidden;
+}
+page view{
+	width: 670rpx;
+}
+.title{
+	margin-top: 80rpx;
+	margin-bottom: 30rpx;
+	font-size: 60rpx;
+	font-weight: bold;
+}
+.title text{
+	font-size: 30rpx;
+}
+.title text text{
+	color: #3253a6;
+}
+.info {
+	font-size: 30rpx;
+	color: #999;
+	margin-bottom: 115rpx;
+}
+.callImgBox{
+	text-align: center;
+}
+.callImgBox image{
+	width: 404rpx;
+	height: 404rpx;
+}
+button {
+	width: 670rpx;
+	height: 100rpx;
+	margin: 0; 
+	border-radius: 50rpx;
+	border: none;
+	background: -webkit-linear-gradient(left, #ff8654 , #f44863);
+    background: linear-gradient(to right, #ff8654 , #f44863);
+	/* margin-bottom: 230rpx; */
+	color: #fff;
+	line-height: 100rpx;
+	font-size: 30rpx;
+	margin-top: 100rpx;
+}
+button image {
+	width: 30rpx;
+	height: 30rpx;
+	vertical-align: middle;
+	margin-right: 24rpx;
+}

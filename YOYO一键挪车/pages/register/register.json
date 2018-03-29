@@ -1,0 +1,6 @@
+{
+	"navigationBarTitleText": "挪车登记",
+	"usingComponents": {
+		"alert": "../component/alert/alert"
+	}
+}
