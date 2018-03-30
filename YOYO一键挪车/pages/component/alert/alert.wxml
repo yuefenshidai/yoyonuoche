@@ -1,7 +1,7 @@
 <block animation="{{animation}}">
 	<view class='cover' >
 		<view class='coverInnerBox'>
-			<view class='coverInnerBox_Close' >
+			<view class='coverInnerBox_Close'  bindtap='sure'>
 				<image src='../../image/close.png'></image>
 			</view>
 			<view class='coverInnerBox_Title'>

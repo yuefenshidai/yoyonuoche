@@ -1,10 +1,10 @@
 <view class='title'>挪车登记
-	<text>(<text>下载挪车卡</text>)</text>
+	<text  bindtap='downloadCard'>(<text>下载挪车卡</text>)</text>
 </view>
 <view class='info'>请认真填写下面的信息，以便于挪车信息登记</view>
 <view class='plateTitle'>我的车牌号</view>
 <view class='plateInput'>
-	 <input value="{{value}}" focus="{{focus}}"  maxlength="7"/>
+	 <input value="{{value}}"   maxlength="7" bindinput='PlateNoInput'/>
 </view>
 <!-- <view class='phoneTitle'>我的手机号</view>
 <view class='phoneInput'>
@@ -15,6 +15,5 @@
 	<input placeholder="" maxlength="6" type='number' />
 	<text>获取验证码</text>
 </view> -->
- <button open-type ='getPhoneNumber' bindgetphonenumber="getphonenumber">我要登记</button> 
-<!-- <button bindtap="getphonenumber">我要登记</button> -->
-<alert wx:if="{{comp}}" bind:sure="modalClose"></alert>
+<button open-type ='getPhoneNumber' bindgetphonenumber="getphonenumber"  disabled="{{sureBoole}}" class="{{sureBoole?'buttonDisable':''}}">我要登记</button>
+<alert wx:if="{{AlertContent}}" bind:sure="modalClose" content="{{AlertContent}}"></alert>

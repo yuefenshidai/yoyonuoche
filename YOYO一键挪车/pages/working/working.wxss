@@ -1,64 +1,11 @@
-page{
-	padding: 0 40rpx;
-	width: 670rpx;
-	overflow: hidden;
+.selectPng{
+	width: 25rpx;
+	height: 16rpx;
+	position: absolute;
+	right: 10rpx;
+	top: 17rpx;
 }
-page view{
-	width: 670rpx;
-}
-.title{
-	margin-top: 80rpx;
-	margin-bottom: 30rpx;
-	font-size: 60rpx;
-	font-weight: bold;
-}
-.title text{
-	font-size: 30rpx;
-}
-.title text text{
-	color: #3253a6;
-}
-.info {
-	font-size: 30rpx;
-	color: #999;
-	margin-bottom: 115rpx;
-}
-.plateTitle,.phoneTitle,.vcodeTitle{
-	font-size: 30rpx;
-	color: #999;
-	margin-bottom: 30rpx;
-}
-.plateInput,.phoneInput,.vcodeInput{
-	border-bottom: 1rpx solid #e5e5e5;
-	margin-bottom: 50rpx;
-	padding-bottom: 16rpx;
-}
-input{
-	min-width: 500rpx;
+picker{
+	flex: 1;
 	height: 40rpx;
-	font-size: 40rpx;
-	line-height: 40rpx;
-}
-.vcodeInput text {
-	font-size: 30rpx;
-	width: 170rpx;
-	flex: 0 0 170rpx;
-	text-align: right;
-	color: #f75560;
-	display: inline-block;
-	line-height: 32rpx;
-}
-button {
-	width: 670rpx;
-	height: 100rpx;
-	margin: 0; 
-	border-radius: 50rpx;
-	border: none;
-	background: -webkit-linear-gradient(left, #ff8654 , #f44863);
-    background: linear-gradient(to right, #ff8654 , #f44863);
-	/* margin-bottom: 230rpx; */
-	color: #fff;
-	line-height: 100rpx;
-	font-size: 30rpx;
-	margin-top: 100rpx;
 }

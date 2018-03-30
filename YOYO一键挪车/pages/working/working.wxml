@@ -1,18 +1,30 @@
 <view class='title'>请求挪车
-	<text>(<text>下载挪车卡</text>)</text>
+	<text bindtap='downloadCard'>(<text>下载挪车卡</text>)</text>
 </view>
 <view class='info'>请正确输入车牌号，平台将记录本次挪车信息</view>
 <view class='plateTitle'>我的车牌号</view>
-<view class='plateInput'>
-	 <input value="{{value}}"  placeholder='川A000001' maxlength="7"/>
-</view>
+ <view class='plateInput flex'>
+	 <input  value='{{valueOwner}}' maxlength='7' data-type='owner' bindinput='inputKeyIn'/>
+	<picker bindchange="bindPickerChange" value="{{valueOwner}}" range="{{pickerList}}" mode = "selector"   style='position:relative;' wx:if="{{pickerList.length>1}}">
+		<image src='../image/select.png' class='selectPng' bindtap='selectlist'></image>
+  </picker>
+</view> 
 <view class='plateTitle'>对方车牌号</view>
 <view class='plateInput'>
-	 <input   maxlength="7" placeholder='川A000001'/>
+	 <input   value="{{valueOffer}}" maxlength="7" placeholder='川A00001' data-type='offer'  bindinput='inputKeyIn'/>
 </view>
 <view class='plateTitle'>车辆位置</view>
 <view class='plateInput'>
-	 <input  placeholder='点击获取当前位置' bindtap="chooseMap" disabled="{{true}}" value="{{address}}"/>
+	<wxs module="foo">
+		var some_msg = function(string){
+			if(string==null) return 
+			return string.substring(0,16)+'...'
+		}
+		module.exports = {
+			msg : some_msg,
+		}
+	</wxs>
+	<input  placeholder='点击获取当前位置' bindtap="chooseMap" disabled="{{true}}" value="{{foo.msg(address)}}"/>
 </view>
 <button bindtap="sure">确认信息</button>
-<alert wx:if="{{comp}}" bind:sure="modalClose"></alert>
+<alert wx:if="{{AlertContent}}" bind:sure="modalClose" content="{{AlertContent}}"></alert>

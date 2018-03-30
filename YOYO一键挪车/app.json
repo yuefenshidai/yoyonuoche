@@ -1,6 +1,5 @@
 {
     "pages": [
-        "pages/index/index",
         "pages/register/register",
         "pages/working/working",
         "pages/call/call"
@@ -8,7 +7,7 @@
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#000",
-        "navigationBarTitleText": "YOYO一键挪车",
+        "navigationBarTitleText": "YOYO车圈一键挪车",
         "navigationBarTextStyle": "#fff"
     }
 }

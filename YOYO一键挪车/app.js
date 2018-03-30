@@ -41,7 +41,7 @@ App({
   },
   globalData: {
     userInfo: null,
-	// url_root: "https://www.happyinstallment.com/yfsd/"
-	url_root: "http://192.168.1.250:8080/yfsd/"
+	url_root: "https://www.happyinstallment.com/yfsd/"
+	// url_root: "http://192.168.1.250:8080/yfsd/"
   }
 })
