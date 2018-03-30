@@ -67,9 +67,15 @@ Page({
 
   //关闭模态框
 	modalClose(){
+		if(this.data.call){
+			wx.makePhoneCall({
+				phoneNumber: '02866004346 '
+			})
+		}
 		this.setData({
 			AlertContent: false,
-      alerttitle:"提示"
+			alerttitle: "提示",
+			call:false
 		})
 	},
 
@@ -110,11 +116,16 @@ Page({
 		success:res=>{
 			wx.hideNavigationBarLoading()
 			if(res.statusCode==200){
-				console.log(res.data)
+				if (res.data.code==0){
+					this.setData({
+						AlertContent: '请拨打02866004346 ，系统将会为你自动接通车主',
+						call: true
+					})
+				}
 			}else{
 				this.setData({
-				AlertContent:res.data.trim(),
-				alerttitle:"很抱歉"
+					AlertContent:res.data.trim(),
+					alerttitle:"很抱歉"
 				})
 			}
 		}

@@ -38,7 +38,7 @@ Page({
 				  sureBoole: false
 			  })
 		  }
-	  },1500)
+	  },7000)
 	if (this.data.value.length!=7){
 		this.setData({
 			AlertContent: '您输入的车牌号不正确'
@@ -82,6 +82,7 @@ Page({
 				session_key: JSON.parse(wx.getStorageSync("sessinKey")).session_key
 			},
 			success:(res)=>{
+				// if (res.data.msg=='解密失败') return
 				let _phone = JSON.parse(res.data.userInfo).purePhoneNumber
 				wx.setStorageSync('phone', _phone)
 				this.setData({
