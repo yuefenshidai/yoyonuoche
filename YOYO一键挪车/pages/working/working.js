@@ -8,7 +8,8 @@ Page({
 	address:null,
 	valueOwner:'川',
 	valueOffer: '川',
-	pickerList:null
+	pickerList:null,
+  alerttitle:'提示'
   },
 
   /**
@@ -67,7 +68,8 @@ Page({
   //关闭模态框
 	modalClose(){
 		this.setData({
-			AlertContent: false
+			AlertContent: false,
+      alerttitle:"提示"
 		})
 	},
 
@@ -110,6 +112,10 @@ Page({
 			if(res.statusCode==200){
 
 			}else{
+        this.setData({
+          AlertContent:res.data.trim(),
+          alerttitle:"很抱歉"
+        })
 
 			}
 		}
@@ -130,7 +136,7 @@ Page({
 					this.setData({
 						pickerList:res.data
 					})
-					if (this.data.pickerList.length == 1){
+					if (this.data.pickerList.length >= 1){
 						this.setData({
 							valueOwner: this.data.pickerList[0]
 						})

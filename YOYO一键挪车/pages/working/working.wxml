@@ -17,7 +17,10 @@
 <view class='plateInput'>
 	<wxs module="foo">
 		var some_msg = function(string){
-			if(string==null) return 
+			if(string==null) return ;
+      if(string.length<=16){
+      return string;
+      };
 			return string.substring(0,16)+'...'
 		}
 		module.exports = {
@@ -27,4 +30,4 @@
 	<input  placeholder='点击获取当前位置' bindtap="chooseMap" disabled="{{true}}" value="{{foo.msg(address)}}"/>
 </view>
 <button bindtap="sure">确认信息</button>
-<alert wx:if="{{AlertContent}}" bind:sure="modalClose" content="{{AlertContent}}"></alert>
+<alert wx:if="{{AlertContent}}" bind:sure="modalClose" content="{{AlertContent}}" title="{{alerttitle}}"></alert>
