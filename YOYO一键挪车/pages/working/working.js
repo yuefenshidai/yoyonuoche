@@ -110,13 +110,12 @@ Page({
 		success:res=>{
 			wx.hideNavigationBarLoading()
 			if(res.statusCode==200){
-
+				console.log(res.data)
 			}else{
-        this.setData({
-          AlertContent:res.data.trim(),
-          alerttitle:"很抱歉"
-        })
-
+				this.setData({
+				AlertContent:res.data.trim(),
+				alerttitle:"很抱歉"
+				})
 			}
 		}
 	})
