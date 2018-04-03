@@ -8,7 +8,6 @@
 picker{
 	flex: 1;
 	height: 50rpx;
-  background: red;
 }
 
 .model_btn{
