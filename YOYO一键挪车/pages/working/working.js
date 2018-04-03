@@ -95,6 +95,7 @@ Page({
 
   //下拉选择
   bindPickerChange(e){
+    console.log(e);
 	  let _idx = (e.detail.value)*1
 	  this.setData({
 		  valueOwner :this.data.pickerList[_idx]

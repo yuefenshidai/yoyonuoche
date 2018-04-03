@@ -1,33 +1,35 @@
 <view class='title'>请求挪车
-	<text bindtap='downloadCard'>(<text>下载挪车卡</text>)</text>
+  <text bindtap='downloadCard'>(<text>下载挪车卡</text>)</text>
 </view>
 <view class='info'>请正确输入车牌号，平台将记录本次挪车信息</view>
 <view class='plateTitle'>我的车牌号</view>
- <view class='plateInput flex'>
-	 <input  value='{{valueOwner}}' maxlength='7' data-type='owner' bindinput='inputKeyIn'/>
-	<picker bindchange="bindPickerChange" value="{{valueOwner}}" range="{{pickerList}}" mode = "selector"   style='position:relative;' wx:if="{{pickerList.length>1}}">
-		<image src='../image/select.png' class='selectPng' bindtap='selectlist'></image>
+<view class='plateInput flex'>
+  <input value='{{valueOwner}}' maxlength='7' data-type='owner' bindinput='inputKeyIn' />
+  <picker bindchange="bindPickerChange" value="{{valueOwner}}" range="{{pickerList}}" mode="selector" style='position:relative;' wx:if="{{pickerList.length>1}}">
+      <view class='model_btn'>
+      <image src='../image/select.png' class='selectPng' ></image>
+    </view>  
   </picker>
-</view> 
+</view>
 <view class='plateTitle'>对方车牌号</view>
 <view class='plateInput'>
-	 <input   value="{{valueOffer}}" maxlength="7" placeholder='川A00001' data-type='offer'  bindinput='inputKeyIn'/>
+  <input value="{{valueOffer}}" maxlength="7" placeholder='川A00001' data-type='offer' bindinput='inputKeyIn' />
 </view>
 <view class='plateTitle'>车辆位置</view>
 <view class='plateInput'>
-	<wxs module="foo">
-		var some_msg = function(string){
-			if(string==null) return ;
-      if(string.length<=16){
-      return string;
+  <wxs module="foo">
+    var some_msg = function(string) {
+      if (string == null) return;
+      if (string.length <= 16) {
+        return string;
       };
-			return string.substring(0,16)+'...'
-		}
-		module.exports = {
-			msg : some_msg,
-		}
-	</wxs>
-	<input  placeholder='点击获取当前位置' bindtap="chooseMap" disabled="{{true}}" value="{{foo.msg(address)}}"/>
+      return string.substring(0, 16) + '...'
+    }
+    module.exports = {
+      msg: some_msg,
+    }
+  </wxs>
+  <input placeholder='点击获取当前位置' bindtap="chooseMap" disabled="{{true}}" value="{{foo.msg(address)}}" />
 </view>
 <button bindtap="sure">确认信息</button>
 <alert wx:if="{{AlertContent}}" bind:sure="modalClose" content="{{AlertContent}}" title="{{alerttitle}}"></alert>
