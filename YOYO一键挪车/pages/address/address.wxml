@@ -1,0 +1,35 @@
+<!--pages/address/address.wxml-->
+<view class='title'>地址登记</view>
+<view class='info'>请输入你的收件地址信息，我们会免费邮寄挪车卡给您</view>
+<view class='plateTitle'>收件人姓名</view>
+<view class='plateInput'>
+	 <input value="{{username}}"   maxlength="7" bindinput='userNameInput'/>
+</view>
+<view class='plateTitle'>寄送详细地址</view>
+<view class='plateInput'>
+	<wxs module="foo">
+		var some_msg = function(string){
+			if(string==null) return ;
+      if(string.length<=16){
+      return string;
+      };
+			return string.substring(0,16)+'...'
+		}
+		module.exports = {
+			msg : some_msg,
+		}
+	</wxs>
+	<input  placeholder='点击选择位置' bindtap="chooseMap" disabled="{{true}}" value="{{foo.msg(address)}}"/>
+</view>
+<!-- <view class='phoneTitle'>我的手机号</view>
+<view class='phoneInput'>
+	<input placeholder="" maxlength="11"  type='number'/>
+</view>
+<view class='vcodeTitle'>手机验证码</view>
+<view class='flex vcodeInput'>
+	<input placeholder="" maxlength="6" type='number' />
+	<text>获取验证码</text>
+</view> -->
+<button bindtap="saveAddresss">保存地址</button>
+<button open-type ='giveUp' bindgetphonenumber="giveUp"  disabled="{{sureBoole}}" class="{{sureBoole?'buttonDisable':''}}">暂不登记</button>
+<alert wx:if="{{AlertContent}}" bind:sure="modalClose" content="{{AlertContent}}"></alert>
