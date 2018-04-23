@@ -69,7 +69,8 @@ Page({
 	modalClose(){
 		if(this.data.call){
 			wx.makePhoneCall({
-				phoneNumber: '02866004346 '
+				// phoneNumber: '02866004346 '
+        phoneNumber: '0289669910'
 			})
 		}
 		this.setData({
@@ -95,6 +96,7 @@ Page({
 
   //下拉选择
   bindPickerChange(e){
+    console.log(e);
 	  let _idx = (e.detail.value)*1
 	  this.setData({
 		  valueOwner :this.data.pickerList[_idx]
@@ -118,7 +120,7 @@ Page({
 			if(res.statusCode==200){
 				if (res.data.code==0){
 					this.setData({
-						AlertContent: '请拨打02866004346 ，系统将会为你自动接通车主',
+            AlertContent: '请拨打0289669910 ，系统将会为你自动接通车主',
 						call: true
 					})
 				}
