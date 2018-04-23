@@ -20,6 +20,7 @@ Page({
 	//   wx.clearStorageSync()
 	  let member = wx.getStorageSync('yfsdmember')
 	  if (member) {
+		  
 		  wx.redirectTo({
 			  url: '../working/working'
 		  })
