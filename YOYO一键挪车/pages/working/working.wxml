@@ -12,7 +12,7 @@
 <view class='plateTitle'>对方车牌号</view>
 <view class='plateInput'>
 	 <input   value="{{valueOffer}}" maxlength="7" placeholder='川A00001' data-type='offer'  bindinput='inputKeyIn'/>
-</view>
+</view>ss
 <view class='plateTitle'>车辆位置</view>
 <view class='plateInput'>
 	<wxs module="foo">

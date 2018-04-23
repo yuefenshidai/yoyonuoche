@@ -1,5 +1,5 @@
 <!--pages/index/index.wxml-->
 
-<navigator url='../register/register'>
+<navigator url='../address/address'>
 	<text>pages/index/index.wxml</text>
 </navigator>

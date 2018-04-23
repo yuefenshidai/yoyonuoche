@@ -1,13 +1,14 @@
 {
-    "pages": [
-        "pages/register/register",
-        "pages/working/working",
-        "pages/call/call"
-    ],
-    "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#000",
-        "navigationBarTitleText": "YOYO车圈一键挪车",
-        "navigationBarTextStyle": "#fff"
-    }
+  "pages": [
+    "pages/register/register",
+    "pages/working/working",
+    "pages/call/call",
+    "pages/address/address"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "YOYO车圈一键挪车",
+    "navigationBarTextStyle": "#fff"
+  }
 }

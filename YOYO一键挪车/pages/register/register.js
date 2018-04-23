@@ -67,7 +67,7 @@ Page({
 	  },()=>{
 		  if (!this.data.next) return
 		  wx.redirectTo({
-			  url: '../working/working',
+        url: '../address/address',
 		  })
 	  })
   },

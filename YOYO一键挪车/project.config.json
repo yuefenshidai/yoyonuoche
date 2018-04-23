@@ -21,16 +21,16 @@
 			"current": -1,
 			"list": []
 		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
-		"miniprogram": {
+		"plugin": {
 			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -48,6 +48,12 @@
 					"id": -1,
 					"name": "打电话",
 					"pathName": "pages/call/call",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "地址",
+					"pathName": "pages/address/address",
 					"query": ""
 				}
 			]
